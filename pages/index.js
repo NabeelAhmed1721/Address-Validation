@@ -1,4 +1,5 @@
-import { Page, Card, Text, Input, Button, Spacer } from '@geist-ui/react'
+import Head from 'next/head'
+import { Page, Text, Input, Button, Spacer } from '@geist-ui/react'
 import { useState, useRef } from 'react'
 
 function HomePage() {
@@ -35,7 +36,11 @@ function HomePage() {
   }
 
   return (
-    <Page size="mini" style={{paddingTop: 56}}>
+    <>
+    <Head>
+      <title>Address Validator</title>
+    </Head>
+    <Page size="mini" style={{paddingTop: 18}}>
       <h2>Address Validator</h2>
       <h5>Made by: <a target="_blank" rel='noreferrer' href="https://github.com/NabeelAhmed1721">Nabeel Ahmed</a></h5>
       <i>Don't worry you're in safe hands. This application won't save your data. I promise :)</i>
@@ -76,6 +81,7 @@ function HomePage() {
         : null
       }
     </Page>
+    </>
   )
 }
 
