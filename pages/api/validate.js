@@ -12,7 +12,7 @@ export default function handler(req, res) {
 function requestValidaton(res, input) {
   const requestAddress = encodeURI(`${input.address}, ${input.city}, ${input.state} ${input.postalCode}`)
 
-    let request = fetch(`https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=${requestAddress}&benchmark=9&format=json`)
+    let request = fetch(`https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?address=${requestAddress}&benchmark=4&format=json`)
 
     request.then(data => {
       data.json().then(response => {
